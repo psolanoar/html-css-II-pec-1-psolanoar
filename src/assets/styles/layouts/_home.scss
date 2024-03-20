@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  padding: 0%;
+  background-color: $color-one;
+  padding-bottom: 0em;
+}
+
+header > h1, header > p {
+  padding-left: 4%;
+  text-align: justify;
+  color: $masterbrand;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0rem;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $color-bg;
+  color: $corporate;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.navigation-bar {
+  display: flex;
+  background-color: $color-one;
+}
+
+.navigation-bar a {
+  color: $masterbrand;
+  padding: 1%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navigation-bar a:hover {
+  background-color: $masterbrand;
+  color: $corporate;
+}
+
+.title {
+  font-family: $font-family-serif;
+  font-size: 22px;
+  font-weight: 700;
+
+  @media (min-width: $mqMinWidth) {
+    font-size: 20px;
+  }
+}
+
+.subtitle {
+  font-family: $font-family-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: $corporate;
+
+  @media (min-width: $mqMinWidth) {
+    font-size:18px;
+  }
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {  
+  display: flex;
+  flex-wrap: column;
+}
+
+.column-left {
+  flex: 60%;
+  padding: 1%;
+}
+
+.column-rigth {
+  flex: 40%;
+  padding: 1%;
+}
+
+.sector-left {
+  padding: 5%;
+  margin-bottom: 5%;
+  border-radius: 0%;
+  text-align: justify;
+  background-color: rgba(156, 148, 148, 0.1);
+}
+
+.sector-rigth {
+  padding: 5%;
+  margin-bottom: 5%;
+  border-radius: 0%;
+  text-align: justify;
+  background-color: rgb(233, 225, 225);
+}
+
+.display-image {
+  background-color: $masterbrand;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  padding: 1%;
+}
+
+.content-image {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  color: $masterbrand;
+}
+
+.content-image > img {
+  opacity: 0.4;
+}
+
+.footer {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media screen and (max-width: $mqMaxWidth) {
+  .container, .navigation-bar {   
+    flex-direction: column;
+  }
+}
