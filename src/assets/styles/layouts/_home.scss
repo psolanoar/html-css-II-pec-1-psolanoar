@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: $font-family-sans-serif;
 }
 
 header {
@@ -20,7 +21,6 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0rem;
-  font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
   background-color: $color-bg;
@@ -50,7 +50,6 @@ img {
 }
 
 .title {
-  font-family: $font-family-serif;
   font-size: 22px;
   font-weight: 700;
 
@@ -59,21 +58,10 @@ img {
   }
 }
 
-.subtitle {
-  font-family: $font-family-serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: $corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size:18px;
-  }
-}
-
-.center-text {
-  position: absolute;
+.title-header  {
   top: 50%;
   left: 50%;
+  position: absolute;
   transform: translate(-50%, -50%);
 }
 
@@ -82,25 +70,17 @@ img {
   flex-wrap: column;
 }
 
-.column-left {
+.flex__column--left {
   flex: 60%;
   padding: 1%;
 }
 
-.column-rigth {
+.flex__column--rigth {
   flex: 40%;
   padding: 1%;
 }
 
-.sector-left {
-  padding: 5%;
-  margin-bottom: 5%;
-  border-radius: 0%;
-  text-align: justify;
-  background-color: rgba(156, 148, 148, 0.1);
-}
-
-.sector-rigth {
+.section {
   padding: 5%;
   margin-bottom: 5%;
   border-radius: 0%;
@@ -108,7 +88,7 @@ img {
   background-color: rgb(233, 225, 225);
 }
 
-.display-image {
+.container-image {
   background-color: $masterbrand;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -116,14 +96,14 @@ img {
   padding: 1%;
 }
 
-.content-image {
+.header-style {
   position: relative;
   display: inline-block;
   text-align: center;
   color: $masterbrand;
 }
 
-.content-image > img {
+.header-style > img {
   opacity: 0.4;
 }
 
