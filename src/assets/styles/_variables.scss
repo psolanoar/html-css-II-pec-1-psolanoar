@@ -1,16 +1,56 @@
 @use "sass:color";
 
+// fonts types
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
-$corporate: #000000;
-$masterbrand: #fffdfd;
-$color-bg: color.scale($masterbrand, $lightness: 70%);
+// fonts sizes
+$title-font-size: 22px;
+$title-minim-font-size: 20x;
+$font-size: 16px;
+$line-height: 24px;
+$font-weight: 700;
 
-$mqMinWidth: 420px;
-$mqMaxWidth: 900px;
+// colors
+$black-color: #000000;
+$white-color: #fffdfd;
+$grey-color: #333;
+$light-grayish-color: #f8f4f4;
+$lightness-color-bg: color.scale($white-color, $lightness: 70%);
+$border-shadow: 0 4px 6px -1px $grey-color, 0 2px 4px -1px $black-color;
 
+// values
+$minus-fifty-percentage: -50%;
+$zero-percentage: 0%;
+$one-percentage: 1%;
+$four-percentage: 4%;
+$five-percentage: 5%;
+$forty-percentage: 40%;
+$fifty-percentage: 50%;
+$sixty-percentage: 60%;
+$hundred-value: 100%;
+$auto-value: auto;
 
-$color-one: #333;
+// styles
+$display-type-flex: flex;
+$display-flex-direction: column;
+$display-type-inline: inline-block;
+$box-style-border: border-box;
+$header-opacity: 0.4;
+
+// text styles
+$justify-value: justify;
+$center-value: center;
+$relative-value: relative;
+$absolute-value: absolute;
+$none-value: none;
+
+// responsive measures 
+$min-width: 420px;
+$max-width: 768px;
+
+// footer
+$footer-margin-top: 1.5rem;
+$footer-font-size: 0.75rem;

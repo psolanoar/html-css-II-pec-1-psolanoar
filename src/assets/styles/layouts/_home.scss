@@ -1,120 +1,120 @@
 * {
-  box-sizing: border-box;
+  box-sizing: $box-style-border;
   font-family: $font-family-sans-serif;
 }
 
 header {
-  padding: 0%;
-  background-color: $color-one;
-  padding-bottom: 0em;
+  padding: $zero-percentage;
+  background-color: $grey-color;
+  padding-bottom: $zero-percentage;
 }
 
 header > h1, header > p {
-  padding-left: 4%;
-  text-align: justify;
-  color: $masterbrand;
+  padding-left: $four-percentage;
+  text-align: $justify-value;
+  color: $white-color;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 0rem;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $color-bg;
-  color: $corporate;
+  display: $display-type-flex;
+  flex-direction: $display-flex-direction;
+  height: $hundred-value;
+  margin: $zero-percentage;
+  padding: $zero-percentage;
+  font-size: $font-size;
+  line-height: $line-height;
+  background-color: $lightness-color-bg;
+  color: $black-color
 }
 
 img {
-  height: auto;
-  max-width: 100%;
+  height: $auto-value;
+  max-width: $hundred-value;
 }
 
 .navigation-bar {
-  display: flex;
-  background-color: $color-one;
+  display: $display-type-flex;
+  background-color: $grey-color;
 }
 
 .navigation-bar a {
-  color: $masterbrand;
-  padding: 1%;
-  text-decoration: none;
-  text-align: center;
+  color: $white-color;
+  padding: $one-percentage;
+  text-decoration: $none-value;
+  text-align: $center-value;
 }
 
 .navigation-bar a:hover {
-  background-color: $masterbrand;
-  color: $corporate;
+  background-color: $white-color;
+  color: $black-color;
 }
 
 .title {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: $title-font-size;
+  font-weight: $font-weight;
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 20px;
+  @media (min-width: $min-width) {
+    font-size: $title-minim-font-size;
   }
 }
 
 .title-header  {
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
+  font-family: $font-family-serif;
+  top: $fifty-percentage;
+  left: $fifty-percentage;
+  position: $absolute-value;
+  transform: translate($minus-fifty-percentage, $minus-fifty-percentage);
 }
 
 .container {  
-  display: flex;
-  flex-wrap: column;
+  display: $display-type-flex;
+  flex-wrap: $display-flex-direction;
 }
 
 .flex__column--left {
-  flex: 60%;
-  padding: 1%;
+  flex: $sixty-percentage;
+  padding: $one-percentage;
 }
 
 .flex__column--rigth {
-  flex: 40%;
-  padding: 1%;
+  flex: $forty-percentage;
+  padding: $one-percentage;
 }
 
 .section {
-  padding: 5%;
-  margin-bottom: 5%;
-  border-radius: 0%;
-  text-align: justify;
-  background-color: rgb(233, 225, 225);
+  padding: $five-percentage;
+  margin-bottom: $five-percentage;
+  border-radius: $zero-percentage;
+  text-align: $justify-value;
+  background-color: $light-grayish-color;
 }
 
 .container-image {
-  background-color: $masterbrand;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  width: 100%;
-  padding: 1%;
+  background-color: $white-color;
+  box-shadow: $border-shadow;
+  width: $hundred-value;
+  padding: $one-percentage;
 }
 
 .header-style {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  color: $masterbrand;
+  position: $relative-value;
+  display: $display-type-inline;
+  text-align: $center-value;
+  color: $white-color;
 }
 
 .header-style > img {
-  opacity: 0.4;
+  opacity: $header-opacity;
 }
 
 .footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+  margin-top: $footer-margin-top;
+  font-size: $footer-font-size;
+  text-align: $center-value;
 }
 
-@media screen and (max-width: $mqMaxWidth) {
+@media screen and (max-width: $max-width) {
   .container, .navigation-bar {   
-    flex-direction: column;
+    flex-direction: $display-flex-direction;
   }
 }
