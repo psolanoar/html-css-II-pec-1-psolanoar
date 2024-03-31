@@ -10,6 +10,12 @@
 @import "variables";
 
 /**
+ * Import colors
+ */
+
+@import "colors";
+
+/**
  * Import npm dependencies
  * see: https://v2.parceljs.org/features/module-resolution/
  * see commented examples below
@@ -17,6 +23,7 @@
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
 
 /**
  * Import layouts

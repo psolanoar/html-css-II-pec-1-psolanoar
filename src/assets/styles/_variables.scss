@@ -1,42 +1,35 @@
 @use "sass:color";
 
 // fonts types
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji","Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
 // fonts sizes
-$title-font-size: 22px;
-$title-minim-font-size: 20x;
-$font-size: 16px;
+$font-size-min: 16px;
+$font-size-subtitle: 20px;
+$font-size-title: 24px;
 $line-height: 24px;
-$font-weight: 700;
+$font-weight-thin: 700;
 
-// colors
-$black-color: #000000;
-$white-color: #fffdfd;
-$grey-color: #333;
-$light-grayish-color: #f8f4f4;
-$lightness-color-bg: color.scale($white-color, $lightness: 70%);
-$border-shadow: 0 4px 6px -1px $grey-color, 0 2px 4px -1px $black-color;
+// related units
+$font-size-min-rem: 1.5rem;
+$font-size-subtitle-rem: 1.5rem;
+$font-size-title-rem: 2rem;
+$margin-top-footer-rem: 1.5rem;
+$font-size-footer-rem: 0.75rem;
 
-// values
+// percentage values
 $minus-fifty-percentage: -50%;
 $zero-percentage: 0%;
 $one-percentage: 1%;
-$four-percentage: 4%;
+$two-percentage: 2%;
 $five-percentage: 5%;
-$forty-percentage: 40%;
 $fifty-percentage: 50%;
-$sixty-percentage: 60%;
 $hundred-value: 100%;
-$auto-value: auto;
 
-// styles
-$display-type-flex: flex;
-$display-flex-direction: column;
-$display-type-inline: inline-block;
+// styles and display
+$flex-display-type: flex;
+$wrap-value: wrap;
 $box-style-border: border-box;
 $header-opacity: 0.4;
 
@@ -46,11 +39,9 @@ $center-value: center;
 $relative-value: relative;
 $absolute-value: absolute;
 $none-value: none;
+$auto-value: auto;
 
 // responsive measures 
-$min-width: 420px;
-$max-width: 768px;
-
-// footer
-$footer-margin-top: 1.5rem;
-$footer-font-size: 0.75rem;
+$tablet-min-devices: 481px;
+$tablet-max-devices: 1024px;
+$desktop-min-devices: 1025px;

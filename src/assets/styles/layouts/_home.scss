@@ -1,120 +1,135 @@
 * {
   box-sizing: $box-style-border;
   font-family: $font-family-sans-serif;
+  font-size: $font-size-min;
 }
 
 header {
-  padding: $zero-percentage;
   background-color: $grey-color;
-  padding-bottom: $zero-percentage;
-}
 
-header > h1, header > p {
-  padding-left: $four-percentage;
-  text-align: $justify-value;
-  color: $white-color;
+  h1  {
+    top: $fifty-percentage;
+    left: $fifty-percentage;
+    position: $absolute-value;
+    transform: translate($minus-fifty-percentage, $minus-fifty-percentage); // relocate the element
+  
+    font: {
+      family: $font-family-serif;
+      size: $font-size-title;
+    }
+  }
 }
 
 body {
-  display: $display-type-flex;
-  flex-direction: $display-flex-direction;
-  height: $hundred-value;
   margin: $zero-percentage;
   padding: $zero-percentage;
-  font-size: $font-size;
   line-height: $line-height;
-  background-color: $lightness-color-bg;
-  color: $black-color
+  color: $black-color;
+  background-color: scale-color($contrast-color-one, $lightness: 90%);
 }
 
 img {
   height: $auto-value;
-  max-width: $hundred-value;
+  width: $hundred-value;
 }
 
-.navigation-bar {
-  display: $display-type-flex;
-  background-color: $grey-color;
-}
+ul {
+  margin-top: $zero-percentage;
 
-.navigation-bar a {
-  color: $white-color;
-  padding: $one-percentage;
-  text-decoration: $none-value;
-  text-align: $center-value;
-}
+  li {
+    display: $flex-display-type;
+    background-color: $grey-color;
+  }
 
-.navigation-bar a:hover {
-  background-color: $white-color;
-  color: $black-color;
-}
+  a {
+    color: $white-color;
+    text-decoration: $none-value;
+    text-align: $center-value;
+  }
 
-.title {
-  font-size: $title-font-size;
-  font-weight: $font-weight;
-
-  @media (min-width: $min-width) {
-    font-size: $title-minim-font-size;
+  a:hover {
+    color: $contrast-color-one;
   }
 }
 
-.title-header  {
-  font-family: $font-family-serif;
-  top: $fifty-percentage;
-  left: $fifty-percentage;
-  position: $absolute-value;
-  transform: translate($minus-fifty-percentage, $minus-fifty-percentage);
-}
-
-.container {  
-  display: $display-type-flex;
-  flex-wrap: $display-flex-direction;
-}
-
-.flex__column--left {
-  flex: $sixty-percentage;
-  padding: $one-percentage;
-}
-
-.flex__column--rigth {
-  flex: $forty-percentage;
-  padding: $one-percentage;
-}
-
-.section {
-  padding: $five-percentage;
-  margin-bottom: $five-percentage;
-  border-radius: $zero-percentage;
-  text-align: $justify-value;
-  background-color: $light-grayish-color;
-}
-
-.container-image {
-  background-color: $white-color;
-  box-shadow: $border-shadow;
-  width: $hundred-value;
-  padding: $one-percentage;
+.subtitle {
+  font-size: $font-size-subtitle;
+  font-weight: $font-weight-thin;
 }
 
 .header-style {
   position: $relative-value;
-  display: $display-type-inline;
   text-align: $center-value;
   color: $white-color;
+
+  img {
+    opacity: $header-opacity;
+  }
 }
 
-.header-style > img {
-  opacity: $header-opacity;
+.container {  
+  display: $flex-display-type;
+  flex-wrap: $wrap-value; 
+}
+
+.container-image {
+  box-shadow: $border-shadow;
+  padding: $one-percentage;
+}
+
+.section {  
+  padding: $two-percentage;
+  padding-bottom: $one-percentage;
+  margin-bottom: $five-percentage;
+  text-align: $justify-value;
+  background-color: $light-grayish-color;
 }
 
 .footer {
-  margin-top: $footer-margin-top;
-  font-size: $footer-font-size;
+  margin-top: $margin-top-footer-rem;
+  font-size: $font-size-footer-rem;
   text-align: $center-value;
+  padding-bottom: $one-percentage;
+
+  a i {
+    padding: $one-percentage;
+    color: $grey-color;
+    font-size: $font-size-min;
+  }
 }
 
-@media screen and (max-width: $max-width) {
-  .container, .navigation-bar {   
-    flex-direction: $display-flex-direction;
+/* media query text styles adapted for medium and large devices */
+@media (min-width: $tablet-min-devices){
+  .header-style {
+    h1 {
+      font-size: $font-size-title-rem;
+    }
+  }
+
+  body {
+    font-size: $font-size-min-rem;
+  }
+
+  .subtitle {
+    font-size: $font-size-subtitle-rem;
+  }
+
+}
+
+/* media query for medium devices and portrait mode */
+@media (min-width: $tablet-min-devices) and (max-width: $tablet-max-devices) {
+  .subtitle {
+    font-size: $font-size-subtitle;
+  }
+  
+  .section {
+    flex-basis: 50%; // display in two columns
+  }
+}
+
+/* media query for large devices */
+@media (min-width: $desktop-min-devices) {
+  .section {
+    flex-basis: 33.33%; // display in three columns
   }
 }
