@@ -1,98 +1,110 @@
 <!DOCTYPE html>
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>Lugares extraodinaros en Japón</title>
-  </head>
-  <body>
-    <include src="./views/header.html"></include>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css"/>
+        <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"/><!-- do not remove this line! -->
+        <title>Lugares extraodinaros en Japón</title>
+    </head>
 
-    <div class="container">
-      <div class="section">
-        <h1 class="subtitle">UN LUGAR HISTÓRICO</h1>
-        <p>
-          Es una de las ciudades más conocidas y pobladas de Japón. <br>
-          Se localiza en el centro de Honshu y fue la capital de Japón entre los años 794 - 1868 hasta que Tokio fue establecida como la capital y se posicionó en primer plano.
-        </p>
-        <div class="container-image">      
-          <figure>
-            <img src="./assets/images/japon_02.jpg" alt="Mujer paseando por Japón"/>
-            <figcaption>Pasea por las calles de Sannenzaka y Ninenzaka</figcaption>
-          </figure>
+    <body class="body--margin">
+        <include src="./views/header.html"></include> <!-- import partial header -->
+
+        <div class="container">
+            <div class="container__column">
+                <h1 class="container__column--subtitle">Un lugar histórico</h1>
+                <p>
+                    Es una de las ciudades más conocidas y pobladas de Japón.
+                    Se localiza en el centro de Honshu y fue la capital de Japón
+                    entre los años 794 - 1868 hasta que Tokio fue establecida
+                    como la capital y se posicionó en primer plano.
+                </p>
+                <div>
+                    <figure>
+                        <img class="container__column--img" src="./assets/images/japon_02.jpg" alt="Mujer paseando por Japón"/>
+                        <figcaption class="container__column--caption">Pasea por las calles de Sannenzaka y Ninenzaka</figcaption>
+                    </figure>
+                </div>
+                <h1 class="container__column--subtitle">Visita el famoso barrio de las casas de té</h1>
+                <p>
+                    Gion es uno de los barrios más famosos por las ceremonias de
+                    té donde podrias ver geishas y maikos, así como las casas tradicionales de estilo japonés
+                </p>
+                <div>
+                    <figure>
+                        <img class="container__column--img" src="./assets/images/japon_06.jpg" alt="Fushimi Inari-taisha"/>
+                        <figcaption class="container__column--caption">Geishas, maykos y cultura tradicional japonesa</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="container__column">
+                <h1 class="container__column--subtitle">Monumentos, patrimonio y cultura ascentral</h1>
+                <p>
+                    Recibe multitud de visitas turísticas debido a la impactante
+                    escenografía compuesta por su patrimonio histórico,
+                    monumental, cultural, entre los cuales podemos encontrarnos
+                    con monumentos reconocidos por la Unesco como Patrimonio de
+                    la humanidad.
+                </p>
+                <div>
+                    <figure>
+                        <img class="container__column--img" src="./assets/images/japon_03.jpg" alt="Fushimi Inari-taisha"/>
+                        <figcaption class="container__column--caption">Ádentrate en el templo de Fushimi Inari-taisha</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="container__column--img" src="./assets/images/japon_04.jpg" alt="Fushimi Inari-taisha"/>
+                        <figcaption class="container__column--caption">Detalle de la entrada en uno de los templos</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="container__column">
+                <h1 class="container__column--subtitle">Tips para viajar por Kioto</h1>
+                <p>
+                    Cuenta con una amplia red de transporte, siendo bastante
+                    popular el tren ya que la ciudad no dispone de aeropuerto
+                    propio siendo estos los más cercanos los de Osaka o Kansai.
+                    No obstante, para llegar a Kioto es recomendable hacerlo en
+                    tren por ejemplo desde Tokio ya que tiene comunicación
+                    directa en poco menos de tres horas, es decir sin
+                    transbordos.
+                </p>
+                <p>
+                    La ciudad cuenta con una comunicación por carretera bastante
+                    destacable la cual permite a casi cualquier parte de la
+                    ciudad en autobús.
+                </p>
+                <div>
+                    <figure>
+                        <img class="container__column--img" src="./assets/images/japon_05.jpg" alt="Transporte en Japón"/>
+                        <figcaption class="container__column--caption">Transporte en Japón</figcaption>
+                    </figure>
+                </div>
+                <h1 class="container__column--subtitle">Viaja tranquilo con el seguro</h1>
+                <p>
+                    Los costes sanitarios son bastante elevados pudiendo costar
+                    entre 500 dolares si se trata de algo no muy grave hasta
+                    miles de dolares en caso de operaciones.
+                </p>
+                <h1 class="container__column--subtitle">Conexión a internet</h1>
+                <p>
+                    Es importante la conexión a interneten cualquier parte de
+                    Japón ya que en muy pocos sitios hablan inglés, siendo común
+                    hacer uso de traductores para poder comunicarse.
+                </p>
+                <div>
+                    <figure>
+                        <img class="container__column--img" src="./assets/images/japon_07.jpg" alt="Transporte en Japón"/>
+                        <figcaption class="container__column--caption">Comunicación en Japón</figcaption>
+                    </figure>
+                </div>
+            </div>
         </div>
-        <h1 class="subtitle">VISITA EL FAMOSOSO BARRIO DE LAS CASAS DE TÉ</h1>
-        <p>
-          Gion es uno de los barrios más famosos por las ceremonias de té donde podrias ver <lightning-vertical-navigation>
-          geishas y maikos, así como las casas tradicionales de estilo japonés
-          </lightning-vertical-navigation>
-        </p>
-        <div class="container-image">      
-          <figure>
-            <img src="./assets/images/japon_06.jpg" alt="Fushimi Inari-taisha"/>
-            <figcaption>Geishas, maykos y cultura tradicional japonesa</figcaption>
-          </figure>
-        </div>
-      </div>
 
-
-      <div class="section">
-        <h1 class="subtitle">MONUMENTOS, PATRIMONIO Y CULTURA ASCENTRAL</h1>
-        <p>
-          Recibe multitud de visitas turísticas debido a la impactante escenografía compuesta por su patrimonio histórico, monumental, cultural, entre los cuales podemos encontrarnos con monumentos 
-          reconocidos por la Unesco como Patrimonio de la humanidad.
-        </p>
-        <div class="container-image">      
-          <figure>
-            <img src="./assets/images/japon_03.jpg" alt="Fushimi Inari-taisha"/>
-            <figcaption>Ádentrate en el templo de Fushimi Inari-taisha</figcaption>
-          </figure>
-          <figure>
-            <img src="./assets/images/japon_04.jpg" alt="Fushimi Inari-taisha"/>
-            <figcaption>Detalle de la entrada en uno de los templos</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="section">
-        <h1 class="subtitle">TIPS PARA VIAJAR POR KIOTO</h1>
-        <p>
-          Cuenta con una amplia red de transporte, siendo bastante popular el tren ya que la ciudad no dispone de aeropuerto propio siendo estos los más cercanos los de Osaka o Kansai.
-          No obstante, para llegar a Kioto es recomendable hacerlo en tren por ejemplo desde Tokio ya que tiene comunicación directa en poco menos de tres horas, es decir sin transbordos. 
-        </p>
-        <p>La ciudad cuenta con una comunicación por carretera bastante destacable la cual permite <lightning-vertical-navigation-overflow>
-          a casi cualquier parte de la ciudad en autobús. 
-        </p>
-        <div class="container-image">      
-          <figure>
-            <img src="./assets/images/japon_05.jpg" alt="Transporte en Japón"/>
-            <figcaption>Transporte en Japón</figcaption>
-          </figure>
-        </div>
-
-        <h1 class="subtitle">VIAJA TRANQUILO CON EL SEGURO</h1>
-          <p>
-            Los costes sanitarios son bastante elevados pudiendo costar entre 500 dolares si se trata de algo no muy grave hasta miles de dolares en caso de operaciones.
-          </p>
-
-        <h1 class="subtitle">CONEXIÓN A INTERNET</h1>
-        <p>
-          Es importante la conexión a interneten cualquier parte de Japón ya que en muy pocos sitios hablan inglés, siendo común hacer uso de traductores para poder comunicarse.
-        </p>
-        <div class="container-image">      
-          <figure>
-            <img src="./assets/images/japon_07.jpg" alt="Transporte en Japón"/>
-            <figcaption>Comunicación en Japón</figcaption>
-          </figure>
-        </div>
-      </div>
-    
-    </div>
-    
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+        <include src="./views/footer.html"></include> <!-- import partial footer -->
+        <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    </body>
 </html>

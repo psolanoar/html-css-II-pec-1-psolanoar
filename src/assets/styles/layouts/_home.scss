@@ -1,88 +1,95 @@
+@use "sass:color"; // access related color functions
+
 * {
   box-sizing: $box-style-border;
   font-family: $font-family-sans-serif;
   font-size: $font-size-min;
 }
 
-header {
-  background-color: $grey-color;
+.body--margin { 
+  margin: $zero-percentage;
+}
 
-  h1  {
-    top: $fifty-percentage;
+@mixin img--size { /* reusable code block */
+  height: $auto-value;
+  width: $hundred-value;
+}
+
+.header {
+  background-color: $grey-color;
+  position: $relative-value;
+  text-align: $center-value;
+  color: $white-color;
+
+  .header__menu {
+    margin-top: $zero-percentage;
+    padding: $one-percentage;
+  
+    .header__menu--option {
+      padding-top: $one-percentage;
+      list-style-type: $none-value;
+
+      .header__menu--option--link {
+        color: $white-color;
+        text-decoration: $none-value;
+        padding-top: $one-percentage;
+      }
+  
+      .header__menu--option--link:hover {
+        color: $contrast-color-one;
+      }
+    }
+  }
+
+  .header--title {
+    font-size: $font-size-title-rem;
+    top: $seventy-percentage;
     left: $fifty-percentage;
     position: $absolute-value;
-    transform: translate($minus-fifty-percentage, $minus-fifty-percentage); // relocate the element
-  
+    transform: translate($minus-fifty-percentage, $minus-fifty-percentage); /* relocate the element */
+    
     font: {
       family: $font-family-serif;
       size: $font-size-title;
     }
   }
-}
-
-body {
-  margin: $zero-percentage;
-  padding: $zero-percentage;
-  line-height: $line-height;
-  color: $black-color;
-  background-color: scale-color($contrast-color-one, $lightness: 90%);
-}
-
-img {
-  height: $auto-value;
-  width: $hundred-value;
-}
-
-ul {
-  margin-top: $zero-percentage;
-
-  li {
-    display: $flex-display-type;
-    background-color: $grey-color;
-  }
-
-  a {
-    color: $white-color;
-    text-decoration: $none-value;
-    text-align: $center-value;
-  }
-
-  a:hover {
-    color: $contrast-color-one;
-  }
-}
-
-.subtitle {
-  font-size: $font-size-subtitle;
-  font-weight: $font-weight-thin;
-}
-
-.header-style {
-  position: $relative-value;
-  text-align: $center-value;
-  color: $white-color;
-
-  img {
+  
+  .header--img {
     opacity: $header-opacity;
+    @include img--size;
   }
 }
 
 .container {  
   display: $flex-display-type;
   flex-wrap: $wrap-value; 
-}
+  margin: $zero-percentage;
+  padding: $zero-percentage;
+  line-height: $line-height;
+  color: $black-color;
 
-.container-image {
-  box-shadow: $border-shadow;
-  padding: $one-percentage;
-}
+  .container__column {  
+    padding: $four-percentage;
+    padding-bottom: $one-percentage;
+    margin-bottom: $five-percentage;
+    text-align: $justify-value;
+    background-color: $light-grayish-color;
 
-.section {  
-  padding: $two-percentage;
-  padding-bottom: $one-percentage;
-  margin-bottom: $five-percentage;
-  text-align: $justify-value;
-  background-color: $light-grayish-color;
+    .container__column--img {
+      box-shadow: $border-shadow;
+      padding: $two-percentage;
+      background-color: adjust($grey-color, $seventy-percentage); /* sass function to increases lightness by an amount */
+      @include img--size;
+    }
+    
+    .container__column--caption {
+      font-size: $font-size-figcaption;
+    }
+  }  
+
+  .container__column:nth-child(3){
+    background-color: color.mix($contrast-color-one, $contrast-color-two, $ten-percentage); /* sass function to mix two colors in a percentage */
+  }
 }
 
 .footer {
@@ -91,45 +98,67 @@ ul {
   text-align: $center-value;
   padding-bottom: $one-percentage;
 
-  a i {
+  .footer--icon {
     padding: $one-percentage;
     color: $grey-color;
     font-size: $font-size-min;
   }
 }
 
-/* media query text styles adapted for medium and large devices */
-@media (min-width: $tablet-min-devices){
-  .header-style {
-    h1 {
+/* media query styles adapted for medium and large devices */
+@media (min-width: $tablet-min-devices) {
+  .header {
+    text-align: $left-value;
+
+    .header--title {
       font-size: $font-size-title-rem;
+    }
+  
+    .header__menu--option {
+      display: $inline-display-type;
+      
+      .header__menu--option--link {
+        padding-right: $two-percentage; 
+      }
     }
   }
 
-  body {
+  .container {
+    line-height: $line-height-rem;
     font-size: $font-size-min-rem;
-  }
 
-  .subtitle {
-    font-size: $font-size-subtitle-rem;
+    .container__column--caption {
+      font-size: $font-size-figcaption-rem;
+    }
+  
+    .container__column--subtitle {
+      font-size: $font-size-subtitle-rem;
+    }
   }
-
 }
 
 /* media query for medium devices and portrait mode */
 @media (min-width: $tablet-min-devices) and (max-width: $tablet-max-devices) {
-  .subtitle {
-    font-size: $font-size-subtitle;
-  }
+  .container {
+    .container__column { 
+      flex-basis: $fifty-percentage; /* display two columns in the same proportion */
   
-  .section {
-    flex-basis: 50%; // display in two columns
+      .container__column--subtitle {
+        font-size: $font-size-subtitle;
+      }
+    }
+  
+    .container__column:nth-child(3) { /* display the third column in full size */
+      flex-basis: $hundred-value;
+    }
   }
 }
 
 /* media query for large devices */
 @media (min-width: $desktop-min-devices) {
-  .section {
-    flex-basis: 33.33%; // display in three columns
+  .container {
+    .container__column {
+      flex-basis: $thirty-three-percentage; /* display all the columns in the same proportion */
+    }
   }
 }
